@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Reimbursement Simulator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="importTab">
+       <attribute name="title">
+        <string>Import</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="importLayout">
+        <item>
+         <layout class="QHBoxLayout" name="toolbarLayout">
+          <item>
+           <widget class="QPushButton" name="fileButton">
+            <property name="text">
+             <string>파일 선택</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="infoLabel">
+            <property name="text">
+             <string>엑셀/CSV 파일을 불러와서 미리보기를 확인하세요.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="toolbarSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="dataTable"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="actionLayout">
+          <item>
+           <widget class="QLineEdit" name="startRowEdit">
+            <property name="placeholderText">
+             <string>시작 row</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="endRowEdit">
+            <property name="placeholderText">
+             <string>끝 row</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="deleteButton">
+            <property name="text">
+             <string>[삭제]</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="saveButton">
+            <property name="text">
+             <string>[저장]</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="groupTab">
+       <attribute name="title">
+        <string>Group</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="groupLayout">
+        <item>
+         <layout class="QHBoxLayout" name="groupControlLayout">
+          <item>
+           <widget class="QLabel" name="groupLabel">
+            <property name="text">
+             <string>그룹 선택</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="groupComboBox"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="loadGroupButton">
+            <property name="text">
+             <string>DB 불러오기</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="groupTable"/>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="groupPreview"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="analysisTab">
+       <attribute name="title">
+        <string>Analysis</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="analysisLayout">
+        <item>
+         <widget class="QLabel" name="analysisLabel">
+          <property name="text">
+           <string>추후 분석 기능을 위한 자리입니다.</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
