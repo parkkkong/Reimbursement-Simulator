@@ -32,4 +32,5 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
 
 def init_db() -> None:
+    Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
