@@ -54,6 +54,7 @@ The database stores imported reimbursement records in a table named reimbursemen
 - lodging_expense
 - remarks
 - note
+- group_name
 
 ## 5. Functional Requirements
 
@@ -63,7 +64,8 @@ The database stores imported reimbursement records in a table named reimbursemen
 - Open a file dialog for selecting Excel or CSV files.
 - Load the selected file into a DataFrame.
 - Display the loaded data in a grid.
-- Allow row deletion via start/end row input and the Delete button.
+- Allow row deletion either by selecting rows directly in the preview table or by entering a start/end row range and clicking the Delete button.
+- Map imported columns to the database schema using both English field names and a set of Korean aliases.
 - Persist the current data into SQLite when the Save button is clicked.
 
 ### 5.2 Group Tab
@@ -79,18 +81,18 @@ The database stores imported reimbursement records in a table named reimbursemen
 
 ## 6. Technology Stack
 
-- Python 3.14+
+- Python 3.x
 - PySide6 for desktop UI.
 - SQLAlchemy for ORM and SQLite access.
 - pandas for reading Excel and CSV files.
-- openpyxl for Excel import support.
+- openpyxl for Excel .xlsx import support; legacy .xls support depends on the runtime environment.
 - SQLite as the local persistent database.
 
 ## 7. Development Notes
 
-- The project is designed to be editable through Qt Designer in the future.
-- UI files should be created separately and converted to Python code as the project evolves.
-- The current implementation uses direct Python UI construction to keep the project runnable quickly.
+- The project includes a Qt Designer UI file and supporting designer assets for future refinement.
+- UI files can be created and edited in Qt Designer, then converted or loaded as the project evolves.
+- The current implementation uses direct Python UI construction to keep the project runnable quickly while preserving the option to switch to designer-based loading later.
 
 ## 8. Future Enhancements
 

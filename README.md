@@ -5,12 +5,12 @@
 
 ## 주요 기능
 - 탭 기반 메인 윈도우
-- Import 탭: 파일 선택, 데이터 미리보기, 행 삭제, 데이터베이스 저장
+- Import 탭: 파일 선택, 데이터 미리보기, 선택한 행 삭제 또는 row 범위 삭제, 데이터베이스 저장
 - Group 탭: DB에 저장된 데이터의 그룹별 확인
 - Analysis 탭: 향후 기능 확장을 위한 placeholder
 
 ## 실행 방법
-1. Python 3.14 이상 환경 준비
+1. Python 3.x 환경 준비
 2. 필요한 패키지 설치
    - `pip install PySide6 SQLAlchemy openpyxl pandas`
 3. 실행
