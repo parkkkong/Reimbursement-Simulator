@@ -170,6 +170,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         session: Session = SessionLocal()
         try:
+            session.query(ReimbursementRecord).delete()
             for _, row in self.current_frame.iterrows():
                 record = ReimbursementRecord(
                     item_code=self._safe_value(row, "item_code"),
